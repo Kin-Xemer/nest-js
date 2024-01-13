@@ -9,6 +9,7 @@ import { BookModule } from './book/book.module';
 import { ConfigModule } from '@nestjs/config';
 import { CatsModule } from './cat/cat.module';
 import { DB_URL } from './config/ constants';
+import configuration from './config/configuration';
 const MONGO_URL = process.env.NODE_ENV === 'test' ? DB_URL.development : DB_URL.production;
 @Module({
   imports: [

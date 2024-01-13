@@ -15,7 +15,7 @@ export class BookController {
   async create(@Body() book: Book): Promise<Book> {
     return await this.bookService.create(book);
   }
-  @Post('delete')
+  @Post('DeleteBook')
   async delete(@Body() { id }: { id: string }) {
     await this.bookService.delete(id);
     return {
